@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Narcotics</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript">
+       $(document).on("mobileinit", function() {
+        $.extend( $.mobile , {
+          pageLoadErrorMessage: 'Either the page cannot be found or it cannot be loaded.'
+        });
+     });
+      $(document).on("pageinit","#page", function() {
+        alert("pageinit is bound!");
+      });
+    </script>
+</head> 
+    <body>
+    <div data-role="page" id="page">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Back">
+     <a data-rel="back">Back</a>
+		<h1>Narcotics</h1>
+	</div>
+  <table height="549" border="3">
+    <tr>
+      <th height="36" scope="row">Substance</th>
+      <td><div align="center"><strong>Street Names</strong></div></td>
+      <td><div align="center"><strong>Medical Use</strong></div></td>
+      <td><div align="center"><strong>Effect and Danger</strong></div></td>
+    </tr>
+    <tr>
+      <th height="132" scope="row"><p><img src="heroin.jpg" width="103" height="69"></p>
+      <p>Herion</p></th>
+      <td><div align="center"><strong>White powder, No.4, American money, HK money</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td rowspan="5"><ol>
+        <li>
+          <div align="left"><strong>Dependence</strong>          </div>
+        </li>
+        <li>
+          <div align="left"><strong>Drowsiness</strong>          </div>
+        </li>
+        <li>
+          <div align="left"><strong>Respiratory depression</strong>          </div>
+        </li>
+        <li>
+          <div align="left"><strong>Nausea</strong>          </div>
+        </li>
+        <li>
+          <div align="left"><strong>Withdrawal syndrome: <br>
+            watery eyes, runny nose, yawning, loss of appetite, irritability, tremors, panic, chills, sweating, cramps</strong></div>
+        </li>
+      </ol></td>
+    </tr>
+    <tr>
+      <th height="116" scope="row"><p><img src="dipipanone.jpg" width="103" height="43"></p>
+      <p>Dipipanone(Wellconal)</p></th>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><div align="center"><strong>Pain relief, <br>
+        prevent <br>
+        narcotic drug <br>
+        withdrawal <br>
+      discomfort</strong></div></td>
+    </tr>
+    <tr>
+      <th scope="row"><p><img src="methadone.jpg" width="103" height="68"></p>
+      <p>Methadone</p>
+      <p><img src="physeptone.jpg" width="103" height="54"></p>
+      <p>Physeptone</p></th>
+      <td><p align="center"><strong>None</strong></p>
+        <div align="center"><br>
+          <br>
+          <br>
+        </div>
+      <p align="center"><strong>None</strong></p></td>
+      <td><div align="center"><strong>Treatment of narcotic drug addiction</strong></div></td>
+    </tr>
+    <tr>
+      <th scope="row"><p><img src="morphine.jpg" width="109" height="44"></p>
+        <p>Morphine Ampoules</p>
+      <p>&nbsp;</p></th>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><div align="center"><strong>Pain relief</strong></div></td>
+    </tr>
+    <tr>
+      <th scope="row"><p><img src="opium.jpg" width="103" height="64"></p>
+      <p>Oqium</p></th>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+    </tr>
+  </table>
+  </body>
+</html>

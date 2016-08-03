@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="UTF-8">
+	<title>The Society for the aid and rehabilitation of drug abusers</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="../website4/jquery.mobile.structure-1.0.1.css" />
+	<link rel="apple-touch-icon" href="../website/reference/images/launch_icon_57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="../website/reference/images/launch_icon_72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="../website/reference/images/launch_icon_114.png" />
+	<link rel="stylesheet" href="../website4/jquery.mobile-1.0.1.css" />
+	<link rel="stylesheet" href="../website4/custom.css" />
+	<script src="../website4/jquery-1.7.1.min.js"></script>
+	<script src="../website4/jquery.mobile-1.0.1.min.js"></script>
+</head> 
+<body> 
+<div id="restau" data-role="page" data-add-back-btn="true">
+	
+	<div data-role="header"> 
+		<h1> The Society for the aid and rehabilitation of drug abusers</h1>
+	</div> 
+	
+	<div data-role="content">
+	<div class="ui-grid-a" id="restau_infos">
+	  <div class="ui-block-b">
+		<p><img src="building.jpg" alt="jeannette photo" align="right"/></p>
+		
+	  </div>
+	</div><!-- /grid-a -->
+	<hr/>
+	
+    
+  
+    
+	<div class="ui-grid-a" id="contact_infos">	
+		<div class="ui-block-a">
+		<h2> Contact us</h2>
+		<p>3/f, Duke of Windsor Social Service Bldg</p>
+		<p> 15 Hennessy Road, Wanchai, Hong Kong	</p>		
+		</div>		
+		<div class="ui-block-b">
+		<img src="location.jpg" alt="plan jeanette" width="152" height="117"/>
+		</div>
+	</div><!-- /grid-a -->
+    
+    
+    
+    
+    
+	<div id="contact_buttons">	
+		<a href="https://www.google.com.hk/maps/place/%E9%A6%99%E6%B8%AF%E6%88%92%E6%AF%92%E6%9C%83/@22.2778567,114.1674296,17z/data=!3m1!4b1!4m5!3m4!1s0x3404005c8f3543b1:0x7b0fed985fd79d0d!8m2!3d22.2778567!4d114.1696183" data-role="button" data-icon="maps"> Find us on Google Maps </a> 	
+		
+	</div>	
+	<hr/>
+	
+	<div id="notation"></div>
+
+
+	<script type="text/javascript">
+
+	$( '#restau' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#note_utilisateur').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);		
+			
+		 });
+		
+	  
+	});
+
+	</script>
+	
+
+	</div>
+
+
+</div><!-- /page -->
+</body>
+</html>

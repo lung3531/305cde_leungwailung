@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Account Creation</title>
+
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css"
+ />
+     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"> </script>
+
+<head>
+
+
+
+ <script>
+    //    $(document).ready(function() {
+//	$(document).on('pageinit', function(){
+$(document).live("pageinit", function () {
+
+			$("#registerbtn").click(function() {
+		
+			    var URLs="register.php";
+          
+				var Username=$("#userid_textbox").val();
+				var Password=$("#password_textbox").val();
+				var Email=$("#email_textbox").val();
+		var myData = "&usid="+ Username + "&pwid=" + Password + "&elid=" + Email; 
+		alert(myData);
+         	  
+			 	$.ajax({
+                	url: URLs,
+                	data: myData,
+					type:"POST",
+					dataType:'text',
+                    success: function(msg){
+					alert(msg);
+					if (msg=='1')
+					{
+						alert("Account created. ");
+						
+              	  	    }
+					  else{
+						alert("Username unavailable, please try another one.");
+						}
+					},
+              	 	error:function(xhr, ajaxOptions, thrownError){
+                 	   alert(xhr.status);
+               	 	   alert(thrownError);
+					   location.reload();
+              	   }
+         	  	 });
+			
+			});
+		});
+		
+</script>
+
+
+</head>
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Back">
+     <a data-rel="back">Back</a>
+		<h1>Account Creation</h1>
+	</div>
+	<div data-role="content">
+    <form class="form" method="post" action="#">
+	  <p><strong>Username:</strong></p>
+	  <p>
+	    <label for="userid_textbox"></label>
+	    <input type="text" name="userid" id="userid_textbox">
+	  </p>
+	  <p><strong>Password:</strong></p>
+	  <p>
+	    <label for="password_textbox"></label>
+	    <input type="text" name="password" id="password_textbox">
+	  </p>
+	  <p><strong>Email:</strong></p>
+	  <p>
+	    <label for="email_textbox"></label>
+	    <input type="text" name="email" id="email_textbox">
+	  </p>
+	  <p>
+	    <input type="submit" name="register" id="registerbtn" value="Create now">
+        
+	  </p></form>
+     
+	</div>
+	<div data-role="footer">
+	</div>
+</div>
+
+
+</body>
+</html>

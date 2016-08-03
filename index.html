@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript">
+       $(document).on("mobileinit", function() {
+        $.extend( $.mobile , {
+          pageLoadErrorMessage: 'Either the page cannot be found or it cannot be loaded.'
+        });
+     });
+      $(document).on("pageinit","#page", function() {
+        alert("pageinit is bound!");
+      });
+    </script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+	  <h1>&nbsp;</h1>
+		<h1><strong>Index</strong></h1>
+	</div>
+    <div data-role="footer">
+		<h4 align="center"><img src="images.jpg" width="225" height="225"></h4>
+  </div>
+
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="login.html" data-role="button" data-ajax="false">Login</a></li>
+   
+			<li><a href="register.html" data-role="button" data-ajax="false">Register</a></li>
+			<li><a href="delete.html" data-role="button" data-ajax="false">Del Account</a></li>
+            <li><a href="update.html" data-role="button" data-ajax="false">Change Password</a></li>
+            
+          
+		</ul>		
+	</div>
+</div>
+</div>
+<div data-role="footer">
+		<h4><img src="../website/hope.jpg" width="400" height="250"></h4>
+	</div>
+
+</body>
+</html>

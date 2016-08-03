@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Others</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript">
+       $(document).on("mobileinit", function() {
+        $.extend( $.mobile , {
+          pageLoadErrorMessage: 'Either the page cannot be found or it cannot be loaded.'
+        });
+     });
+      $(document).on("pageinit","#page", function() {
+        alert("pageinit is bound!");
+      });
+    </script>
+</head> 
+    <body>
+    <div data-role="page" id="page">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Back">
+     <a data-rel="back">Back</a>
+		<h1>Others</h1>
+	</div>
+  <table height="714" border="3">
+    <tr>
+      <th height="36" scope="row">Substance</th>
+      <td><div align="center"><strong>Street Names</strong></div></td>
+      <td><div align="center"><strong>Medical Use</strong></div></td>
+      <td><div align="center"><strong>Effect and Danger</strong></div></td>
+    </tr>
+    <tr>
+      <th height="384" scope="row"><p>&nbsp;</p>
+        <p><img src="ketamine.jpg" width="102" height="74"></p>
+<p>Ketamine)</p>
+<p>&nbsp;</p></th>
+      <td><p align="center"><strong>Special K, K, Kit Kat, Vitamin K</strong></p>
+      <p align="center">&nbsp;</p></td>
+      <td><p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p align="center">&nbsp;</p>
+        <p align="center"><strong>Surgical anaesthetic</strong> </p>
+        <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+      <td><ol>
+        <li><strong>Memory loss</strong></li>
+        <li><strong>Affects muscle function</strong></li>
+        <li><strong>Addiction</strong></li>
+        <li><strong>Heart problems</strong></li>
+        <li><strong>Loss of consciousness</strong></li>
+        <li><strong>Hallucination</strong></li>
+        <li><strong>Frequent urination</strong></li>
+        <li><strong>Urinary incontinence</strong></li>
+        <li><strong>Brain damage</strong></li>
+      </ol>
+      <div align="center"></div></td>
+    </tr>
+    <tr>
+      <th height="188" scope="row"><p>&nbsp;</p>
+        <p><img src="tfmpp.jpg" width="102" height="128"></p>
+      <p>Derivatives of piperazine <br>
+      e.g. TFMPP</p></th>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><ol>
+        <li><strong>Vomiting</strong></li>
+        <li><strong>Headache</strong></li>
+        <li><strong>Palpitations</strong></li>
+        <li><strong>Anxiety</strong></li>
+        <li><strong>Insomnia</strong></li>
+        <li><strong>Confusion irritability and tremors</strong></li>
+        <li><strong>Grand mal seizures</strong></li>
+      </ol></td>
+    </tr>
+    <tr>
+      <th scope="row"><p>&nbsp;</p>
+        <p>Cough Medicine:</p>
+        <p><img src="codeine.jpg" width="103" height="85"></p>
+        <p>Codeine</p>
+        <p><img src="dextromethorphan.jpg" width="103" height="85"></p>
+        <p>Dextromethorphan</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></th>
+      <td><div align="center">
+        <p>&nbsp;</p>
+        <p><strong>Robo, DXM <br>
+          </strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><br>
+          <br>
+          <br>
+          None</strong></p>
+      </div></td>
+      <td><div align="center"><strong>Cough suppressant</strong></div></td>
+      <td><ol>
+        <li><strong>Memory loss</strong></li>
+        <li><strong>Slow to react</strong></li>
+        <li><strong>Reduced breathing rate</strong></li>
+        <li><strong>Brain damage</strong></li>
+        <li><strong>Intoxication and drug induced mental disorders</strong></li>
+        <li><strong>Tooth decay</strong></li>
+        <li><strong>Many abusers underestimate the addictiveness of cough medicine and gradually increase the dosages and thus the risks</strong></li>
+      </ol></td>
+    </tr>
+    </table>
+</body>
+</html>

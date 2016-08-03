@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Delete Account</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"> </script>
+<script>
+
+
+$(document).ready(function() {
+	
+$("#submit").on('click',function() {
+    var username=$("#username").val();
+    var pass1=$("#password").val();
+    var pass2=$("#repassword").val();
+	var email=$("#email").val();
+	
+	if(pass1==pass2){
+	}else{
+		alert("password doesn't match");
+	    return;	
+	}
+	
+	
+    var myData = 'username='+username+'&password='+pass1+"&email="+email;
+	 		
+        $.ajax({
+  		  	 url:'api.php',
+  			   type:"POST",
+           dataType : 'text',
+  			   data:myData,
+        success: function(msg, status){
+    				alert(msg);
+        
+                },
+                 error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
+                 }
+            });
+   
+});	
+
+
+//===========================login==========&符號代表database主名稱
+$("#login").on('click',function() {
+    var username=$("#loginusername").val();
+    var pass1=$("#loginpassword").val();
+
+	
+    var myData = 'username='+username+'&password='+pass1;
+	 		
+        $.ajax({
+  		  	 url:'api2.php',
+  			   type:"GET",
+           dataType : 'text',
+  			   data:myData,
+        success: function(msg, status){
+    				alert(msg);
+        
+                },
+                 error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
+                 }
+            });
+   
+});	
+
+	
+//==============Update Journal===============
+$("#update").on('click',function() {
+     var username=$("#updateusername").val();
+    var oldpass=$("#updateoldpassword").val();
+	var newpass=$("#updatenewpassword").val();
+	
+    var myData = 'username='+username+'&oldpass='+oldpass+'&newpass='+newpass;
+	 			
+        $.ajax({
+  		  	 url:'api.php',
+  			   type:"PUT",
+           dataType : 'text',
+  			   data:myData,
+        success: function(msg, status){
+    				alert(msg);
+        
+                },
+                 error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
+                 }
+            });
+   
+});
+
+//==============Delete review===============
+$("#delete").on('click',function() {
+	     var username=$("#deleteusername").val();
+    var password=$("#deletepassword").val();
+
+    var myData = 'username='+username+'&password='+password;
+    //var review_id="reviewid";
+    //var myData = 'review_id='+review_id;
+              
+        $.ajax({
+          url:'delete.php',
+          type:"DELETE",
+          dataType : 'text',
+          data:myData,
+        success: function(msg, status){
+            alert(msg);
+          
+                },
+                 error:function(xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
+                 }
+            });
+   
+});
+
+
+
+
+});
+
+</script>
+</head> 
+<body>
+<div data-role="page" id="page">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Back">
+     <a data-rel="back">Back</a>
+		<h1>Delete Account</h1>
+	</div>
+<p><br>
+<div data-role="content">
+  <strong>Username:</strong>
+  <input type="text" id="deleteusername"><br>
+  <strong>Password:</strong>
+  <input type="text" id="deletepassword"><br>
+</p>
+<button id="delete">Remove now</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hallucinogens</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript">
+       $(document).on("mobileinit", function() {
+        $.extend( $.mobile , {
+          pageLoadErrorMessage: 'Either the page cannot be found or it cannot be loaded.'
+        });
+     });
+      $(document).on("pageinit","#page", function() {
+        alert("pageinit is bound!");
+      });
+    </script>
+   </head>
+    <body>
+    <div data-role="page" id="page">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="Back">
+     <a data-rel="back">Back</a>
+		<h1>Hallucinogens</h1>
+	</div>
+  <table height="799" border="3">
+    <tr>
+      <th height="36" scope="row">Substance</th>
+      <td><div align="center"><strong>Street Names</strong></div></td>
+      <td><div align="center"><strong>Medical Use</strong></div></td>
+      <td><div align="center"><strong>Effect and Danger</strong></div></td>
+    </tr>
+    <tr>
+      <th height="225" scope="row"><p><img src="cannabis.jpg" width="102" height="77"></p>
+      <p>Cannabis</p></th>
+      <td><div align="center"><strong>Marijuana, hash, grass</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td rowspan="2"><ol>
+        <li><strong>Hallucination</strong></li>
+        <li><strong>Impaired co-ordination</strong></li>
+        <li><strong>Addiction</strong></li>
+        <li><strong>Heightened risk of cancer</strong></li>
+        <li><strong>Reduced concentration and impaired memory and judgment</strong></li>
+        <li><strong>Depression and extreme suspicion of others</strong></li>
+        <li><strong>Irritability and short temper</strong></li>
+        <li><strong>Respiratory disease</strong></li>
+        <li><strong>Regular users of cannabis are more likely to try other illicit drugs</strong></li>
+      </ol></td>
+    </tr>
+    <tr>
+      <th height="116" scope="row"><p><img src="cannabis_resin.jpg" width="102" height="70"></p>
+      <p>Cannabis</p></th>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+    </tr>
+    <tr>
+      <th height="186" scope="row"><p>&nbsp;</p>
+        <p><img src="synthetic_cannabinoids.jpg" width="102" height="56"></p>
+      <p>Synthetic cannabinoids</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></th>
+      <td><p align="center"><strong>K2, SPICE</strong></p></td>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><ol>
+        <li><strong>Hallucinations</strong></li>
+        <li><strong>Increased agitation</strong></li>
+        <li><strong>Elevated blood pressure and heart rates</strong></li>
+        <li><strong>Seizures</strong></li>
+      </ol></td>
+    </tr>
+    <tr>
+      <th scope="row"><p><img src="lsd.jpg" width="101" height="79"></p>
+        <p>LSD</p>
+      <p>&nbsp;</p></th>
+      <td><div align="center"><strong>Black Sesame, Fing Ba</strong></div></td>
+      <td><div align="center"><strong>None</strong></div></td>
+      <td><ol>
+        <li><strong>Disoriented behaviour</strong></li>
+        <li><strong>Impaired judgement</strong></li>
+        <li><strong>Nausea and vomiting</strong></li>
+        <li><strong>Increased pulse rate and elevated blood pressure</strong></li>
+      </ol></td>
+    </tr>
+  </table>
+  </body>
+</html>
