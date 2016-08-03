@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule ^/?log$ login.php
+RewriteRule ^/?del$ delete.php
+RewriteRule ^/?regis$ register.php
+RewriteRule ^/?up$ update.php
+
+
+
